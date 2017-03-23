@@ -1,5 +1,5 @@
 $( window ).on( "load", function(e) {
-  //  console.log(e);
+    console.log(e);
    console.log("HERE");
  })
 
