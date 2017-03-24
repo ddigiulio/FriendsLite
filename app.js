@@ -3,7 +3,7 @@ $(window).on("load", function (e) {
   //console.log("HERE");
 });
 
-console.log(localStorage.getItem("accessToken"));
+console.log(localStorage.getItem("accessToken"))
 
 //var ACCESSTOKEN = 
 var URL = "https://api.instagram.com/v1/users/self/media/liked?access_token=" + ACCESSTOKEN;
