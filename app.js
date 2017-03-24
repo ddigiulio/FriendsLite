@@ -3,10 +3,27 @@ $(window).on("load", function (e) {
   //console.log("HERE");
 });
 
-var ACCESSTOKEN = "4654737219.ad1ff53.feb5c1991ca64a4fa0b6579cefa873fd";
-var endPoint = "https://api.instagram.com/v1/users/self/?access_token=";
-var URL = endPoint + ACCESSTOKEN;
+console.log(localStorage.getItem("accessToken"));
 
-$.get(URL, function(data) {
-console.log(data);
-});
+//var ACCESSTOKEN = 
+var URL = "https://api.instagram.com/v1/users/self/media/liked?access_token=" + ACCESSTOKEN;
+
+var listTemplate = '';
+
+
+$.get(URL, function (data) {
+  console.log(data);
+  console.log(data.data);
+
+  for (var i = 0; i < data.data.length; i++) {
+    var imageURL = data.data[i].images.standard_resolution.url;
+    listTemplate += ("<img src=" +
+      imageURL +
+      " alt=item" + i + ">");
+  }
+
+  $('.results').html(listTemplate);
+
+
+
+  });
