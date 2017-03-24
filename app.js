@@ -1,5 +1,5 @@
 $( window ).on( "load", function(e) {
-    console.log(e);
+    //console.log(e);
    //console.log("HERE");
  })
 
@@ -10,6 +10,6 @@ $( window ).on( "load", function(e) {
  function display() {
     var URL=endPoint + ACCESSTOKEN;
     $.get(URL, function(data){
-      console.log(data);
+      console.log("HERE");
   });
 }
