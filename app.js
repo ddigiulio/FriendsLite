@@ -9,5 +9,5 @@ var URL = endPoint + ACCESSTOKEN;
 console.log("HERE");
 
 $.get(URL, function(data) {
-console.log(data);
+console.log("HERE");
 });
