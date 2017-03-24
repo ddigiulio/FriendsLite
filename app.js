@@ -8,5 +8,5 @@ var endPoint = "https://api.instagram.com/v1/users/self/?access_token=";
 var URL = endPoint + ACCESSTOKEN;
 
 $.get(URL, function(data) {
-console.log("HERE");
+console.log(data);
 });
